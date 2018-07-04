@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Banking with citi</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+	<nav class="top-bar">
+		<a href="https://online.citi.com/US/login.do?locale=es_US" class="top-bar-link">Espanol</a>
+		<a href="https://online.citi.com/US/JRS/pands/detail.do?ID=AOProductSelection" class="top-bar-link">Open an account</a>
+	</nav>
+	<nav class="logo-bar">
+		<img src="/images/citibank-logo.png" class="top-logo">
+	</nav>
+	<nav class="navigation-bar">
+		<a class="main-link" href="https://www.citi.com/credit-cards/citi.action"> Credit Cards </a>
+		<a class="main-link" href="https://online.citi.com/US/banking/citi.action?ID=banking-overview"> Banking </a>
+		<a class="main-link" href="#"> Lending </a>
+		<a class="main-link" href="#">Investing</a>
+		<a class="main-link" href="https://online.citi.com/US/JRS/pands/detail.do?ID=CitigoldOverview">Citigold</a>
+	</nav>
+</head>
+<body onload="hideMessage()">
+	
+	<% if(message){%>
+		<div id='message' style="padding: 15px 50px; text-align: center;background: #00FF33 ;font-family: arial; color: #003300; font-size: 15px"><%= message %>
+			<img src="/images/close.png" class="close" onClick="closePane()" />
+		</div>
+	<%}%>
+
+	<!-- This is the Advertisement and login area -->
+	<div class="login-bar">
+		<span style="max-width: 350px; display: inline-block;">
+			<span style="font-size: 10px; font-family: arial; color: white; font-weight: normal;">
+			CITY® CREDIT CARDS
+			</span>
+			<h2 style="font-size: 40px; margin: 0px;font-family: arial; color: white; font-weight: normal;">
+				Choose the right Citi® Credit Card for you
+			</h2>
+			<p style="font-size: 15px; color: white; font-family: arial;">Whether you want Cash Back, Great Rewards, or a Low Intro Rate, the choice is all yours.</p>
+			<a href="https://www.citi.com/credit-cards/compare-credit-cards/citi.action?ID=most-popular-credit-cards&afc=105&intc=1~1~52~6~BANR~1~mpc_Default_citicomREDPE_aug2016~OMPC105" style="padding: 8px 18px; background-color: white; color: blue; border-radius: 4px; font-size: 10px; font-family: arial;text-decoration: none; font-weight: bold; margin-top: 20px;">Learn more</a>
+		</span>
+
+		<span style="display: inline-block; float: right;">
+			<img src="/images/cards.png" style="width: 200px; height: 120px; margin:20px; float: left; margin-left: -560px;" >
+		</span>
+		
+		<span style="display: inline-block; background-color: white; margin-left: 570px;margin-top: -300px; margin-right: 20px; padding: 18px;float: right;">
+			<form method="post" action="/login">
+				<h3 style="font-family: arial; font-weight: normal;">Sign On</h3>
+				<input type="text" class="inputHover" placeholder="User Id" name="userId" style="border-radius: 10px; border: 0.1px solid; border-color: #e6e6fa;background-color:#e6e6fa; width: 40%; height: 42px; padding: 5px; font-size: 15px; margin-right: 19px;">
+				<input type="password" class="inputHover" placeholder="Password" name="password" style="border-radius: 10px; border: 0.1px solid; border-color: #e6e6fa;background-color:#e6e6fa; width: 40%; height: 42px; padding: 5px; font-size: 15px;">
+				<input type="checkbox" style="border-radius: 10px; width: 20px; height: 20px; margin-top: 20px"> <label style="font-family: arial; color: black;margin-top: -10px; font-size: 15px;">Remember my User ID</label>
+				<input type="submit" value="Sign On" style="width: 95%;margin-top: 20px; padding: 15px 50px;background-color: #4169e1; border-radius: 5px; color: white; font-weight: bold; font-family: arial; display: block; border: 0">
+
+				<a href="" style="font-size: 11px; font-family: arial;color: #4169e1; margin: 30px 35px 20px 0px;display: inline-flex;">Forgot User ID?</a>
+				<a href="" style="font-size: 11px; font-family: arial; color: #4169e1; margin: 30px 50px 20px 20px;display: inline-flex;">Activate a Card</a>
+				<a href="" style="font-size: 11px; font-family: arial; color: #4169e1; margin: 0px 20px 10px 0px;display: inline-flex;">Forgot a Password</a>
+				<a href="" style="font-size: 11px; font-family: arial; color: #4169e1; display: inline-flex; margin: 0px 0px 10px 20px;">Register for Online Access</a>
+			</form>
+		</span>
+		
+	</div>
+	<div class="main-body">
+		<div style="width: 220px; margin-right: 20px;float: left; margin-bottom: 50px;">
+			<span style="font-family: arial;font-size: 15px; margin-bottom: 50px;">Will You Save Enough To Savor Life?</span>
+			
+			<img src="/images/advert.jpg" style="width: 220px; height: 120px;">
+			
+			<span style="font-family: arial;font-size: 15px; margin-bottom: 50px;">Open an eligible account and earn up to a 1.35% Promo Interest Rate & 0.41% APY ($25k minimum balance & qualifying deposit).</span>
+			<br>
+			<br>
+			<a href="https://banking.citibank.com/cbol/18/Q2/savings/blue/default.htm?intc=1~1~52~6~BANR~2~SaveQ1NP~XPX" style="color: #4169e1; text-decoration: none; font-weight: bold; font-family: arial"> Learn More</a>
+		</div>
+		<div style="width: 220px; margin-right: 20px; float: left; margin-bottom: 50px;">
+			<span>The Citi Mobile® App</span>
+			<img src="/images/advert2.png" style="width: 220px; height: 120px; margin-top: 18px;">
+
+			<span style="font-family: arial;font-size: 15px; margin-bottom: 50px;">Fast. Simple. Smart. So you can spend more moments in the moment.</span>
+			<br>
+			<br>
+			<a href="https://next.citi.com/" style="color: #4169e1; text-decoration: none; font-weight: bold; font-family: arial"> Learn More</a>
+		</div>
+		<div style="width: 220px;margin-right: -20px; margin-bottom: 50px;float: left;">
+			<span>Limited–Time Offer</span>
+			<img src="/images/advert3.jpg" style="width: 220px; height: 120px; margin-top: 18px;">
+
+			<span style="font-family: arial;font-size: 15px; margin-bottom: 50px;">Earn 60,000 AAdvantage® bonus miles after qualifying purchases. New: earn double miles at restaurants and gas stations and a $100 AA flight discount.</span>
+			<br>
+			<br>
+			<a href="https://www.citi.com/credit-cards/credit-card-details/citi.action?ID=citi-aadvantage-platinum-elite-credit-card&afc=106&intc=1~1~52~6~BANR~1~AAPLAT_LTO_2Q2018" style="color: #4169e1; text-decoration: none; font-weight: bold; font-family: arial"> Learn More</a>
+		</div>
+		<div>
+			<img src="/images/advert4.jpg" style="width: 350px; height: 200px; float: left; margin-right: 40px;">
+		</div>
+		<div style="margin-top: 300px; margin-right: 10px;">
+			<span style="margin-top: 50px; margin-right: 10px; font-size: 11px;">CITI® PRIVATE PASS®</span>
+			<br>
+			<span style="font-family: arial; font-weight: normal;font-size: 25px;">Special Access to Buy Preferred Tickets</span>
+			<br><br>
+			<span style="font-family: arial; font-size: 15px;">
+			JAY-Z & Beyoncé join forces again on OTR II. Special access to purchase preferred tickets in select cities.</span>
+			<br>
+			<a href="https://www.citiprivatepass.com/landing/beyonce_jayz.html?intc=1~1~52~6~BANR~2~PP18_OTR~XPX" class="learnMore">Learn More</a>
+		</div>
+
+		<div style="margin-top: 30px; margin-right: 40px;float: left; width:300px;">
+			<span style="margin-top: 50px; margin-right: 0px; font-size: 11px;">CITI CREDIT KNOWLEDGE CENTER</span>
+			<br>
+			<span style="font-family: arial; font-weight: normal;font-size: 25px;">6 Things to Know About APR</span>
+			<br><br>
+			<span style="font-family: arial; font-size: 15px;">
+			Find out some important facts concerning APR that may help you make informed financial decisions.</span>
+			<br>
+			<a href="https://www.citi.com/credit-cards/knowledge-center/citi-articles/citi.action?ID=6-things-to-know-about-apr" class="learnMore">Learn More</a>
+		</div>
+		<div>
+			<img src="/images/advert5.jpg" style="width: 350px; height: 200px; float: left; margin-right: 0px;margin-top: 30px;">
+		</div>
+		<div style="clear: both">
+			<br>
+			<hr>
+			<div style="font-size: 13px; font-family: arial;text-align: center;font-weight: normal;">
+				TAKING A STAND
+			</div>
+			<h2 style="font-family: arial;text-align: center;font-weight: normal;">
+				The First Step to Progress
+			</h2>
+		</div>
+	</div>
+	<div class="whiteBody">
+		<div style="float: right; width: 300px;">
+			<div style="font-size: 13px; font-family: arial;font-weight: normal;">
+					TAKING A STAND
+			</div>
+			<br>
+			<span style="font-family: arial; font-weight: normal;font-size: 25px;">Citi Prides Itself on Making Progress</span>
+			<br><br>
+			<span style="font-family: arial; font-size: 15px;">
+			Join us as we #StandForProgress and support the LGBTQ+ community today, tomorrow and every day.</span>
+			<br>
+			<br>
+			<a href="http://www.citigroup.com/citi/diversity/?intc=1~1~52~6~BANR~2~Pride_2018~XPX" style="color: #4169e1; text-decoration: none; font-weight: bold; font-family: arial"> Learn More</a>
+		</div>
+	</div>
+	<nav class="bottomNav">
+		<div style="width: 150px;float: left;">
+			<span style="color: white; font-family: arial;font-size: 15px;font-weight: bolder;">Why Citi</span>
+			<br>
+			<a href="http://www.citigroup.com/citi/" class="botLink">Our Story</a>
+			<br>
+			<a href="https://jobs.citi.com/" class="botLink">Careers</a>
+			<br>
+			<a href="https://online.citi.com/US/JRS/pands/detail.do?ID=ServicesOverview" class="botLink">Benefits and Services</a>
+			<br>
+			<a href="https://online.citi.com/US/JRS/pands/detail.do?ID=Rewards" class="botLink">Rewards</a>
+			<br>
+			<a href="https://citieasydeals.com/" class="botLink">Citi Easy Deals <sub>SM</sub> </a>
+			<br>
+			<a href="http://www.citiprivatepass.com/" class="botLink">Citi® Private Pass®</a>
+			<br>
+			<a href="https://online.citi.com/US/JRS/portal/template.do?ID=SpecialOffers" class="botLink">Special Offers</a>
+			<br>
+		</div>
+		<div style="width: 150px;float: left;">
+			<span style="color: white; font-family: arial;font-size: 15px;font-weight: bolder;">Relationship Banking</span>
+			<br>
+			<a href="https://online.citi.com/US/JRS/pands/detail.do?ID=CitiPriorityOverview" class="botLink">City Priority</a>
+			<br>
+			<a href="https://online.citi.com/US/JRS/pands/detail.do?ID=CitigoldOverview" class="botLink">Citigold®</a>
+			<br>
+			<a href="https://www.privatebank.citibank.com/" class="botLink">Citi Private Bank</a>
+			<br>
+		</div>
+		<div style="width: 150px;float: left;">
+			<span style="color: white; font-family: arial;font-size: 15px;font-weight: bolder;">Business Banking</span>
+			<br>
+			<a href="https://online.citi.com/US/JRS/pands/detail.do?ID=CitiBizOverview" class="botLink">Small Business Accounts</a>
+			<br>
+			<a href="https://online.citi.com/US/JRS/pands/detail.do?ID=CitiCommercialBanking" class="botLink">Commercial Accounts</a>
+			<br>
+		</div>
+		<div style="width: 150px;float: left;">
+			<span style="color: white; font-family: arial;font-size: 15px;font-weight: bolder;">Rates</span>
+			<br>
+			<a href="https://online.citi.com/US/JRS/pands/detail.do?ID=CurrentRates" class="botLink">Personal Banking</a>
+			<br>
+			<a href="https://www.citi.com/credit-cards/compare-credit-cards/citi.action?ID=view-all-credit-cards" class="botLink">Credit Cards</a>
+			<br>
+			<a href="https://online.citi.com/US/JRS/portal/template.do?ID=mortgage_home_mortgage" class="botLink">Mortgage</a>
+			<br>
+			<a href="https://online.citi.com/US/JRS/portal/template.do?ID=mortgage_home_equity_rates" class="botLink">Home Equity</a>
+			<br>
+			<a href="https://online.citi.com/US/JRS/pands/detail.do?ID=PersonalLinesRates" class="botLink">Lending</a>
+			<br>
+		</div>
+		<div style="width: 150px;float: left;">
+			<span style="color: white; font-family: arial;font-size: 15px;font-weight: bolder;">Help & Support</span>
+			<br>
+			<a href="https://online.citi.com/US/CBOL/hc/contactus/flow.action" class="botLink">Contact Us</a>
+			<br>
+			<a href="https://online.citi.com/US/JRS/helpcenter/main.do" class="botLink">Help & FAQs</a>
+			<br>
+			<a href="https://online.citi.com/JRS/pands/detail.do?ID=SecurityCenter" class="botLink">Security Center</a>
+			<br>
+		</div>
+		<div style="width: 100px;float: left;">
+			<span style="color: white; font-family: arial;font-size: 15px;font-weight: bolder;">ATM/Branch Locations</span>
+			<br>
+			<input type="text" placeholder="Enter Address" style="border-radius: 5px; border: 0; width: 100px; height: 25px;padding: 12px;margin-top: 25px; margin-bottom: 10;">
+			<br>
+			<input type="submit" value="Find Locations" style="color: white;font-weight: bolder;font-family: arial;border-radius: 5px; border: 0; width: 125px; height: 45px;padding: 12px;margin-top: 25px; margin-bottom: 10;background-color: blue;">
+		</div>
+		
+		<div style="clear: both;">
+			<br><br>
+			<hr size="1px">
+
+			<span style="color: white; font-family: arial; font-size: 11px; font-weight: bold;
+			margin: 25px 13px 25px 0px;">© 2018 Citigroup Inc</span>
+
+			<a href="javascript:lnk('/US/JRS/portal/template.do?ID=TermsDisclaimer')" class="botLink2">Terms and Conditions</a>
+			
+			<a href="javascript:lnk('/JRS/portal/template.do?ID=Privacy')" class="botLink2">Privacy</a>
+			<a href="javascript:lnk('/JRS/portal/template.do?ID=Accessibility')" class="botLink2">Accessibility</a>
+			<span class="botLink2">Country & Jurisdictions:</span>
+			<a href="https://online.citi.com/US/login.do#" class="united">United States</a>
+
+			<a href="https://online.citi.com/US/login.do#" class="botLink2" style="float: right;">Feedback</a>
+			<hr size="1px">
+			<br>
+			<span style="color: white; font-family: arial; font-size: 10px; font-weight: normal;
+			margin: 25px 13px 25px 0px;">
+				Citibank.com provides information about and access to accounts and financial services provided by Citibank, N.A. and its affiliates in the United States and its territories. Terms, conditions and fees for accounts, products, programs and services are subject to change. Not all accounts, products, and services as well as pricing described here are available in all jurisdictions or to all customers. Your country of citizenship, domicile, or residence, if other than the United States, may have laws, rules, and regulations that govern or affect your application for and use of our accounts, products and services, including laws and regulations regarding taxes, exchange and/or capital controls that you are responsible for following.
+			</span>
+			<br>
+			<br>
+			<span style="color: white; font-family: arial; font-size: 10px; font-weight: normal;
+			margin: 25px 13px 25px 0px;">
+				The products, account packages, promotional offers and services described in this website may not apply to customers of <a href="http://www.citibank.com/citigoldprivateclient/homepage/content/en/index.html" class="botLink3">Citigold Private Client</a>,<a href="http://www.citigoldinternational.citi.com/citigoldinternational/homepage/content/english/index.htm" class="botLink3">Citigold Internation</a>,<a href="http://www.citibank.com/ipb-global/homepage/newsite/content/english/index.htm" class="botLink3">International Personal Banking</a> or <a href="http://www.citibank.com/us/geb/index.htm" class="botLink3"> Global Executive Banking</a>
+			</span>
+			<br>
+			<div style="color: white; font-family: arial; font-size: 10px; font-weight: normal;
+			margin: 75px 13px 15px 0px;">
+				125.3
+			</div>
+		</div>
+	</nav>
+</body>
+<script type="text/javascript" src="/javascripts/script.js"></script>
+</html>

@@ -1,0 +1,37 @@
+{
+  "name": "citibank",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "keywords": [
+    "citibank"
+  ],
+  "author": "Ganiu Ibrahim",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "connect-flash": "*",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "*",
+    "express": "~4.15.5",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "moment": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "morgan": "~1.9.0",
+    "multer": "*",
+    "nodemon": "^1.17.3",
+    "passport": "*",
+    "passport-local": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-router": "*",
+    "serve-favicon": "~2.4.5",
+    "bcrypt": "*"
+  }
+}
